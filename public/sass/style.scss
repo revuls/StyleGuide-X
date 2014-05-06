@@ -1,0 +1,58 @@
+body {
+  background-color: #f0f1f2 !important;
+  position: relative;
+}
+
+.FExxx-nav-sidebar {
+  ul {
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 0;
+      &.active a{
+        border-left: 2px solid #44596c;
+      }
+      a {
+        text-decoration: none;
+        color: #44596c;
+        padding: 2px 10px;
+        border-left: 2px solid #f0f1f2;
+        &:visited {
+          color: #44596c;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #6e7e8a;
+          border-left: 2px solid #44596c;
+        }
+        &:active {
+          border-left: 2px solid #44596c;
+        }
+      }
+    }
+  }
+}
+
+.FExxx-element {
+  background-color: white;
+  padding: 1px 20px 20px 20px;
+  margin-bottom: 50px;
+  hr {
+    border: 1px dashed #BBB;
+  }
+}
+
+.affix {
+  width: inherit; //helped keep the content the same size on fluid layouts
+  position: fixed;
+  top: 50px;  //height of the nav
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;  //height of the footer
+}
+.affix-top {
+  //i didn't need this style but you might
+}

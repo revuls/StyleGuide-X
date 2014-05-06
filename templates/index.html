@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta charset=utf-8 />
+    <title>{{config.name}} Style Guide</title>
+    <link rel='shortcut icon' href='path/to/favicon.ico' type='image/x-icon' />
+    <link href='{{config.cssPath}}' rel='stylesheet' />
+    <link href='css/style.css' rel='stylesheet' />
+    <link href='css/simplegrid.css' rel='stylesheet' />
+</head>
+<body data-spy="scroll" data-target="#FExxx-nav-sidebar">
+    <div class="grid grid-pad">
+
+        <div class="col-3-12 sidebar">
+            <div class="content">
+                <nav id="FExxx-nav-sidebar" class="FExxx-nav-sidebar">
+                    <ul class="nav">
+                    {% for element in elements %}
+                        <li><a href="#{{element.slug}}">{{element.title}}</a></li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-9-12">
+            <div class="content">
+            {% for element in elements %}
+                <article id="{{element.slug}}" class="FExxx-element">
+                    <h3>{{element.title}}</h3>
+                    {{element.comments | raw}}
+                    <hr/>
+                    {{element.content | raw}}
+                    <hr/>
+                    <pre class="prettyprint linenums">{{element.content}}</pre>
+                </article>
+            {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/stickySidebar.js"></script>
+    <script src="js/scrollspy.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert&amp;lang=html" defer="defer"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.sidebar').stickySidebar();
+
+        });
+    </script>
+</body>
+</html>
