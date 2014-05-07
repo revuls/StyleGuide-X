@@ -1,14 +1,9 @@
 {
-<<<<<<< HEAD
     "name":"revuls/FExxx",
     "type":"Tool",
-=======
-    "name":"revuls/slimMVC",
-    "type":"framework",
->>>>>>> 163415aa57bbf0dd234abc03bae0920af7ec42e8
-    "description":"MVC for the PHP microframework Slim",
-    "keywords":["microframework", "rest", "router", "mvc"],
-    "homepage":"https://github.com/revuls/SlimMVC",
+    "description":"Styleguide generator",
+    "keywords":["styleguide", "css", "sass", "generator"],
+    "homepage":"https://github.com/revuls/FExxx",
     "license":"MIT",
     "authors":[
         {
