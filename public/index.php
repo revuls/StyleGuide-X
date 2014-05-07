@@ -13,10 +13,20 @@ $app = new \Slim\Slim(array(
     'config' => $config
 ));
 
-// Automatically load router files
-$routers = glob('../routers/*.router.php');
-foreach ($routers as $router) {
-    require $router;
-}
+// GET index route
+$app->get('/', function () use ($app) {
+    $config = $app->config('config');
+    $menu = lib\FExxx::getSections();
+    $elements = lib\FExxx::getAllFrom('elements');
+    $app->render('index.html', array('menu' => $menu, 'elements' => $elements, 'config' => $config));
+});
+
+// GET Folder to get all the elements
+$app->get('/:folder', function ($folder) use ($app) {
+    $config = $app->config('config');
+    $menu = lib\FExxx::getSections();
+    $elements = lib\FExxx::getAllFrom($folder);
+    $app->render('index.html', array('menu' => $menu, 'elements' => $elements, 'config' => $config));
+});
 
 $app->run();

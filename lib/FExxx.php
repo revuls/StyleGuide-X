@@ -51,4 +51,12 @@ class FExxx {
             return $array;
     }
 
+    /*
+     *  Get Sections for the Top Menu
+     */
+    public static function getSections(){
+        $sections = array_diff(scandir("../html/"), array('..', '.'));
+        return $sections;
+    }
+
 }

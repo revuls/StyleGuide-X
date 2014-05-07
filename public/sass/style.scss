@@ -3,7 +3,32 @@ body {
   position: relative;
 }
 
+header.FExxx-nav {
+  font-family: ProximaNova, Arial, sans-serif !important;
+  background-color: #293f54;
+  height: 60px;
+  width: 100%;
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline;
+        a {
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          margin-right: 30px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
 .FExxx-nav-sidebar {
+  font-family: ProximaNova, Arial, sans-serif !important;
   ul {
     padding: 0;
     list-style: none;
@@ -45,7 +70,6 @@ body {
 .affix {
   width: inherit; //helped keep the content the same size on fluid layouts
   position: fixed;
-  top: 50px;  //height of the nav
 }
 .affix-bottom {
   width: inherit;

@@ -1,6 +1,6 @@
-
-    "name":"revuls/slimMVC",
-    "type":"framework",
+{
+    "name":"revuls/FExxx",
+    "type":"Tool",
     "description":"MVC for the PHP microframework Slim",
     "keywords":["microframework", "rest", "router", "mvc"],
     "homepage":"https://github.com/revuls/SlimMVC",

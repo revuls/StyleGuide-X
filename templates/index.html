@@ -10,8 +10,22 @@
     <link href='css/simplegrid.css' rel='stylesheet' />
 </head>
 <body data-spy="scroll" data-target="#FExxx-nav-sidebar">
-    <div class="grid grid-pad">
 
+    <header id="FExxx-nav" class="FExxx-nav">
+        <div class="grid grid-pad">
+            <div class="col-3-12 sidebar">
+                <nav>
+                    <ul class="nav">
+                        {% for element in menu %}
+                        <li><a href="/{{element}}">{{element}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid grid-pad">
         <div class="col-3-12 sidebar">
             <div class="content">
                 <nav id="FExxx-nav-sidebar" class="FExxx-nav-sidebar">
@@ -42,14 +56,11 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/stickySidebar.js"></script>
+    <script src="js/affix.js"></script>
     <script src="js/scrollspy.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert&amp;lang=html" defer="defer"></script>
     <script>
         $(document).ready(function() {
-
-            $('.sidebar').stickySidebar();
-
         });
     </script>
 </body>
