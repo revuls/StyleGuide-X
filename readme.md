@@ -1,7 +1,7 @@
-FExxx
-=======
+StyleGuide-X
+============
 
-FExxx is the easiest and flexible way to create the CSS Styleguide of your project
+StyleGuide-X is the easiest and flexible way to create the CSS Styleguide of your project
 
 Getting Started
 ---------------
