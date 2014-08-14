@@ -15,15 +15,13 @@
 
     <header id="FExxx-nav" class="FExxx-nav">
         <div class="grid grid-pad">
-            <div class="col-3-12 sidebar">
-                <nav>
-                    <ul class="nav">
-                        {% for element in menu %}
-                        <li><a href="/{{element}}">{{element}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
+            <nav>
+                <ul class="nav">
+                    {% for element in menu %}
+                    <li><a href="/{{element}}">{{element}}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </div>
     </header>
 
