@@ -5,7 +5,9 @@
     <meta charset=utf-8 />
     <title>{{config.name}} Style Guide</title>
     <link rel='shortcut icon' href='path/to/favicon.ico' type='image/x-icon' />
-    <link href='{{config.cssPath}}' rel='stylesheet' />
+    {% for cssFile in config.cssPath %}
+    <link href='{{cssFile}}' rel='stylesheet' />
+    {% endfor %}
     <link href='css/style.css' rel='stylesheet' />
     <link href='css/simplegrid.css' rel='stylesheet' />
 </head>
