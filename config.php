@@ -9,7 +9,10 @@ Config::write('cssPath', 'https://www.leadrouter.com/content/css/global/global.m
 
 // Project Config
 $config['name'] = "";
+$config['url'];
 
 // All the CSS Styles needed
-$config['cssPath'][0] = "";
-$config['cssPath'][1] = "";
+$config['cssPath'] = array(
+    "",
+    ""
+);
