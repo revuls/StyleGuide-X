@@ -1,6 +1,6 @@
 /nbproject/
 /.idea/
 /vendor/
-**/.sass-cache
-**/.sass-cache/*
+/sass/.sass-cache
+/sass/.sass-cache/*
 composer.lock
