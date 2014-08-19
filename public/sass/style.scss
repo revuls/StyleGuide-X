@@ -17,7 +17,7 @@ header.FExxx-nav {
         display: inline;
         a {
           color: white;
-          text-transform: uppercase;
+          text-transform: capitalize;
           text-decoration: none;
           margin-right: 30px;
           font-size: 20px;
@@ -64,6 +64,7 @@ header.FExxx-nav {
   margin-bottom: 50px;
   hr {
     border: 1px dashed #BBB;
+    clear: both;
   }
 }
 
