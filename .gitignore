@@ -1,4 +1,5 @@
 /nbproject/
 /.idea/
 /vendor/
+/.sass-cache/
 composer.lock
