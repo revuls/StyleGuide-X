@@ -47,8 +47,11 @@ class FExxx {
                 $array[$number]['content'] = self::remove_html_comments($code);
             }
         }
-        if (isset($array))
+        if (isset($array)) {
+            ksort($array);
             return $array;
+        }
+
     }
 
     /*
