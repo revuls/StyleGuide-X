@@ -4,6 +4,8 @@ body {
 }
 
 header.FExxx-nav {
+  z-index: 5;
+  position: fixed;
   font-family: ProximaNova, Arial, sans-serif !important;
   background-color: #293f54;
   height: 60px;
@@ -28,6 +30,8 @@ header.FExxx-nav {
 }
 
 .FExxx-nav-sidebar {
+  margin-top: 60px;
+  position: fixed;
   font-family: ProximaNova, Arial, sans-serif !important;
   ul {
     padding: 0;
@@ -56,6 +60,12 @@ header.FExxx-nav {
       }
     }
   }
+}
+
+.FExxx-content {
+  margin-top: 60px;
+  position: relative;
+  left: 25%;
 }
 
 .FExxx-element {
