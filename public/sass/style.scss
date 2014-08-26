@@ -29,6 +29,17 @@ header.FExxx-nav {
   }
 }
 
+.FExxx-options {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  i.icon {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+  }
+}
+
 .FExxx-nav-sidebar {
   margin-top: 60px;
   position: fixed;
