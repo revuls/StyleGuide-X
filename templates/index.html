@@ -16,7 +16,8 @@
 
     <header id="FExxx-nav" class="FExxx-nav">
         <div class="FExxx-options">
-            <i class="icon ion-arrow-expand"></i>
+            <i id="sidebar_icon" class="icon ion-android-storage"></i>
+            <i id="expand_icon" class="icon ion-arrow-expand"></i>
         </div>
         <div class="grid grid-pad">
             <nav>
@@ -29,8 +30,8 @@
         </div>
     </header>
 
-    <div class="grid grid-pad">
-        <div class="col-3-12">
+    <div id="wrapper" class="grid grid-pad">
+        <div id="sidebar_div" class="col-3-12">
             <div class="content">
                 <nav id="FExxx-nav-sidebar" class="FExxx-nav-sidebar">
                     <ul class="nav">
@@ -65,6 +66,30 @@
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert" defer="defer"></script>
     <script>
         $(document).ready(function() {
+            $('#sidebar_icon').on('click', function(){
+                if ($('#sidebar_div').is(":visible")) {
+                    $('.FExxx-content').removeClass('col-9-12');
+                    $('.FExxx-content').addClass('col-1-1');
+                    $('.FExxx-content').css( "left", '0%');
+                } else {
+                    $('.FExxx-content').removeClass('col-1-1');
+                    $('.FExxx-content').addClass('col-9-12');
+                    $('.FExxx-content').css( "left", '25%');
+                }
+                $('#sidebar_div').toggle();
+            });
+
+            $('#expand_icon').on('click', function(){
+                if ($(this).hasClass('ion-arrow-expand')) {
+                    $(this).removeClass('ion-arrow-expand');
+                    $(this).addClass('ion-arrow-shrink');
+                    $('#wrapper').removeClass('grid grid-pad');
+                } else {
+                    $(this).removeClass('ion-arrow-shrink');
+                    $(this).addClass('ion-arrow-expand');
+                    $('#wrapper').addClass('grid grid-pad');
+                }
+            });
         });
     </script>
 </body>
